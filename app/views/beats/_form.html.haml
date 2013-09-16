@@ -1,0 +1,16 @@
+= form_for @beat, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :name, :class => 'control-label'
+    .controls
+      = f.text_field :name, :class => 'text_field'
+  .control-group
+    = f.label :owner, :class => 'control-label'
+    .controls
+      = f.text_field :owner, :class => 'text_field'
+  .control-group
+    = f.label :media, :class => 'control-label'
+    .controls
+      = f.text_field :media, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), beats_path, :class => 'btn'
